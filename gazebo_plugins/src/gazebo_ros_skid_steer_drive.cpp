@@ -432,7 +432,7 @@ namespace gazebo {
     // TODO create some non-perfect odometry!
     // getting data for base_footprint to odom transform
 #if GAZEBO_MAJOR_VERSION >= 8
-    ignition::math::Pose3d pose = this->parent->WorldPose();
+    ignition::math::Pose3d pose = this->parent->GetLink(robot_base_frame_)->WorldPose();
 #else
     ignition::math::Pose3d pose = this->parent->GetWorldPose().Ign();
 #endif
